@@ -5,16 +5,7 @@
 3. dt-blob.bin - конфиг GPU (для конфигурации камеры) (положить в /boot)
 4. dt-blob-cam1.dts - вышеупомянутый конфиг в формате dts (на случай необходимости внести изменения)
 5. asound.conf - конфиг аудио кодека (положить в /rootfs/etc)
-
-# Настройка аудио кодека
-
-1. sudo alsamixer
-2. в открывшейся утилите нажать F6 и выбрать audioinjector-pi-soundcard
-3. Нажать F5
-4. установить параметры как показано ниже (для изменения параметров используются клавиши вверх/вниз, M, O, space)
-![Alsa config](alsaconfig.png)
-5. нажать Esc
-6. sudo alsactrl
+6. asound.state - конфиг аудио кодека (положить в /rootfs/var/lib/alsa/asound.state)
 
 
 
