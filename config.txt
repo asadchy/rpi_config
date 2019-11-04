@@ -71,7 +71,11 @@ dtoverlay=audioinjector-wm8731-audio
 dtoverlay=vc4-kms-v3d
 ignore_lcd=1
 #disable_touchscreen=1
-#dtoverlay=rpi-jd9365-gpio-backlight
+dtoverlay=rpi-jd9365-gpio-backlight
+#dtoverlay=rpi-jd9365-pwm-backlight
 dtoverlay=rpi-nxp-mfrc522
+dtoverlay=nxp-htrc110
+dtoverlay=gpio-door-lock
+dtoverlay=i2c0-bcm2708,pins_0_1=1
 start_x=1
 gpu_mem=128
