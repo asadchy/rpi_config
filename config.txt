@@ -79,5 +79,6 @@ dtoverlay=gpio-door-lock
 dtoverlay=i2c0-bcm2708,pins_0_1=1
 dtoverlay=ti-ina260,addr=0x41
 dtoverlay=ti-ina260,addr=0x40
+dtoverlay=w1-gpio,gpiopin=29
 start_x=1
 gpu_mem=128
