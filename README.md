@@ -16,6 +16,9 @@
 Положить в `/rootfs/etc`.
 1. `asound.state` - конфиг аудио кодека.\
 Положить в `/rootfs/var/lib/alsa/asound.state`.
+1. `mkdir /rootfs/etc/gsm`
+1. `gpio.sh` - положить в `/rootfs/etc/gpio`
+1. `rc.local` - положить в `/etc/rc.local` (заменить существующий файл).
 
 # Настройка GSM модема
 
@@ -27,7 +30,6 @@
 `a-gsm_peers` должен быть переименован в `a-gsm`.
 1. `/rootfs/etc/ppp/chat/a-gsm` - в данном файле по умолчанию установлен APN для оператора A1.\
 В случае использования другого оператора, APN должен быть изменен
-1. `rc.local` - положить в `/etc/rc.local` (заменить существующий файл).
 1. `mkdir /rootfs/etc/gsm`
 1. `gsm_modem.sh` - положить в `/rootfs/etc/gsm`
 1. `sudo chown root:root gsm_modem.sh` (устанавливаем root в качестве владельца).\
