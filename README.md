@@ -16,7 +16,7 @@
 Положить в `/rootfs/etc`.
 1. `asound.state` - конфиг аудио кодека.\
 Положить в `/rootfs/var/lib/alsa/asound.state`.
-1. `mkdir /rootfs/etc/gsm`
+1. `mkdir /rootfs/etc/gpio`
 1. `gpio.sh` - положить в `/rootfs/etc/gpio`
 1. `rc.local` - положить в `/etc/rc.local` (заменить существующий файл).
 
