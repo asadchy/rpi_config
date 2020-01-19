@@ -21,9 +21,9 @@
 .fail
 
 ### Automatically restore the volume of streams and devices
-load-module module-device-restore
-load-module module-stream-restore
-load-module module-card-restore
+#load-module module-device-restore
+#load-module module-stream-restore
+#load-module module-card-restore
 
 ### Automatically augment property information from .desktop files
 ### stored in /usr/share/application
@@ -133,10 +133,11 @@ load-module module-role-cork
 ### on demand. module-filter-heuristics tries to determine what filters
 ### make sense, and module-filter-apply does the heavy-lifting of
 ### loading modules and rerouting streams.
+load-module module-echo-cancel aec_method=webrtc aec_args="analog_gain_control=0 digital_gain_control=1"
 load-module module-filter-heuristics
 load-module module-filter-apply
-load-module module-echo-cancel aec_method=webrtc aec_args="analog_gain_control=0 digital_gain_control=1"
-
+load-module module-equalizer-sink sink_master=alsa_output.plughw_2_0.echo-cancel
+load-module module-dbus-protocol
 ### Make some devices default
-set-default-sink alsa_output.plughw_2_0.echo-cancel
+set-default-sink alsa_output.plughw_2_0.echo-cancel.equalizer
 set-default-source alsa_input.plughw_2_0.echo-cancel
