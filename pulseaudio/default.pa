@@ -136,8 +136,6 @@ load-module module-role-cork
 load-module module-echo-cancel aec_method=webrtc aec_args="analog_gain_control=0 digital_gain_control=1"
 load-module module-filter-heuristics
 load-module module-filter-apply
-load-module module-equalizer-sink sink_master=alsa_output.plughw_2_0.echo-cancel
-load-module module-dbus-protocol
 ### Make some devices default
-set-default-sink alsa_output.plughw_2_0.echo-cancel.equalizer
+set-default-sink alsa_output.plughw_2_0.echo-cancel
 set-default-source alsa_input.plughw_2_0.echo-cancel
