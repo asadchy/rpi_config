@@ -81,6 +81,7 @@ dtoverlay=ti-ina260,addr=0x41
 dtoverlay=ti-ina260,addr=0x40
 dtoverlay=w1-gpio,gpiopin=29
 dtoverlay=uart1
+dtoverlay=in-pi556
 start_x=1
 gpu_mem=128
 uart_enable=1
