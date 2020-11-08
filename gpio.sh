@@ -30,7 +30,6 @@ config_pin_and_create_link "26" "in" "GPIO26"
 #configure GPIO16, GPIO27, GPIO45 as outputs
 config_pin_and_create_link "16" "out" "GPIO16"
 config_pin_and_create_link "27" "out" "GPIO27"
-config_pin_and_create_link "45" "out" "GPIO45"
 
 #configure tx_enable (GPIO17) as output
 config_pin_and_create_link "17" "out" "TX_ENABLE"
