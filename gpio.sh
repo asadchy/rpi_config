@@ -21,7 +21,7 @@ config_pin_and_create_link "499" "in" "OC4"
 #configure GPB6, GPB7, GPA7 as inputs
 config_pin_and_create_link "502" "in" "GPB6"
 config_pin_and_create_link "503" "in" "GPB7"
-config_pin_and_create_link "495" "in" "GPA7"
+config_pin_and_create_link "495" "out" "GPA7"
 
 #configure GPIO25, GPIO26 as inputs
 config_pin_and_create_link "25" "in" "GPIO25"
@@ -29,7 +29,7 @@ config_pin_and_create_link "26" "in" "GPIO26"
 
 #configure GPIO16, GPIO27, GPIO45 as outputs
 config_pin_and_create_link "16" "out" "GPIO16"
-config_pin_and_create_link "27" "out" "GPIO27"
+#config_pin_and_create_link "27" "out" "GPIO27"
 
 #configure tx_enable (GPIO17) as output
 config_pin_and_create_link "17" "out" "TX_ENABLE"
