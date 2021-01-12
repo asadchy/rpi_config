@@ -35,8 +35,8 @@ load-module module-switch-on-port-available
 ### Load audio drivers statically
 ### (it's probably better to not load these drivers manually, but instead
 ### use module-udev-detect -- see below -- for doing this automatically)
-load-module module-alsa-sink device=plughw:2,0
-load-module module-alsa-source device=plughw:2,0
+load-module module-alsa-sink device=plughw:1,0
+load-module module-alsa-source device=plughw:1,0
 #load-module module-oss device="/dev/dsp" sink_name=output source_name=input
 #load-module module-oss-mmap device="/dev/dsp" sink_name=output source_name=input
 #load-module module-null-sink
@@ -137,5 +137,5 @@ load-module module-echo-cancel aec_method=webrtc aec_args="analog_gain_control=0
 load-module module-filter-heuristics
 load-module module-filter-apply
 ### Make some devices default
-set-default-sink alsa_output.plughw_2_0.echo-cancel
-set-default-source alsa_input.plughw_2_0.echo-cancel
+set-default-sink alsa_output.plughw_1_0.echo-cancel
+set-default-source alsa_input.plughw_1_0.echo-cancel
