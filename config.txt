@@ -74,7 +74,7 @@ ignore_lcd=1
 #dtoverlay=rpi-jd9365-gpio-backlight
 dtoverlay=rpi-jd9365-pwm-backlight
 dtoverlay=rpi-nxp-mfrc522
-dtoverlay=nxp-htrc110
+#dtoverlay=nxp-htrc110
 dtoverlay=gpio-door-lock
 dtoverlay=i2c0-bcm2708,pins_0_1=1
 dtoverlay=ti-ina260,addr=0x41
@@ -83,6 +83,6 @@ dtoverlay=w1-gpio,gpiopin=29
 dtoverlay=uart1
 dtoverlay=in-pi556
 start_x=1
-gpu_mem=128
+gpu_mem=256
 uart_enable=1
 core_freq=250
