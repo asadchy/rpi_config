@@ -42,4 +42,5 @@ config_pin_and_create_link "489" "out" "RL2"
 config_pin_and_create_link "490" "out" "IRLED_ON"
 
 #configure HEAT_ON as output
-config_pin_and_create_link "35" "out" "HEAT_ON"
+config_pin_and_create_link "35" "out" "HEAT_ON1"
+config_pin_and_create_link "8" "out" "HEAT_ON2"
