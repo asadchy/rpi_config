@@ -80,6 +80,7 @@ dtoverlay=i2c0-bcm2708,pins_0_1=1
 dtoverlay=ti-ina260,addr=0x41
 dtoverlay=ti-ina260,addr=0x40
 dtoverlay=w1-gpio,gpiopin=29
+dtoverlay=w1-gpio,gpiopin=42
 dtoverlay=uart1
 dtoverlay=in-pi556
 start_x=1
