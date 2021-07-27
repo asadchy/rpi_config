@@ -19,9 +19,9 @@ config_pin_and_create_link "498" "in" "OC3"
 config_pin_and_create_link "499" "in" "OC4"
 
 #configure GPB6, GPB7, GPA7 as inputs
-config_pin_and_create_link "502" "in" "GPB6"
+config_pin_and_create_link "502" "out" "IRFILTER_ON"
 config_pin_and_create_link "503" "in" "GPB7"
-config_pin_and_create_link "495" "out" "GPA7"
+config_pin_and_create_link "495" "in" "GPA7"
 
 #configure GPIO25, GPIO26 as inputs
 config_pin_and_create_link "25" "in" "GPIO25"
