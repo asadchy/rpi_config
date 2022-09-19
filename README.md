@@ -22,15 +22,11 @@
 
 # Настройка GSM модема
 
-1. `mkdir /rootfs/etc/ppp/chat`
-1. `a-gsm_chat` - положить в `/rootfs/etc/ppp/chat/a-gsm`.\
-`a-gsm_chat` должен быть переименован в `a-gsm`.
-1. `mkdir /rootfs/etc/ppp/peers`
-1. `a-gsm_peers` - положить в `/rootfs/etc/ppp/peers/a-gsm`.\
-`a-gsm_peers` должен быть переименован в `a-gsm`.
-1. `/rootfs/etc/ppp/chat/a-gsm` - в данном файле по умолчанию установлен APN для оператора A1.\
-В случае использования другого оператора, APN должен быть изменен
+1. Непосредственно на малине: `sudo apt-get install network-manager`
+
+1. `NetworkManager.conf` положить в `/etc/NetworkManager`
+1. `ETH.nmconnection` и `GSM.nmconnection` положить в `/etc/NetworkManager/system-connections`
+1. `dhcpcd.conf` положить в `/etc/'
 1. `mkdir /rootfs/etc/gsm`
 1. `gsm_modem.sh` - положить в `/rootfs/etc/gsm`
 1. `sudo chown root:root gsm_modem.sh` (устанавливаем root в качестве владельца).\
-1. Непосредственно на малине: `sudo apt-get install pppoe` (устанавливаем демона pppd).

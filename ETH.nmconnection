@@ -1,0 +1,17 @@
+[connection]
+id=ETH
+uuid=d870de4a-b0b5-3c8b-9020-77abde631606
+type=ethernet
+autoconnect-priority=-999
+permissions=
+timestamp=1635278693
+
+[ipv4]
+dns-search=
+method=auto
+route-metric=100
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+method=auto
