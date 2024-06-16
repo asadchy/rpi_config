@@ -1,9 +1,23 @@
 #!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
 
 /home/pi/hostname.sh &
 
 /etc/gpio/gpio.sh &
 
+/usr/bin/dtoverlay w1-gpio gpiopin=29
+
+/usr/bin/dtoverlay w1-gpio gpiopin=42
 sleep 1
 
 #/etc/gsm/gsm_modem.sh &
@@ -13,19 +27,17 @@ sleep 1
 
 /bin/echo -e -n "\xFF\x00\x00\x00" > /dev/in-pi556
 
-/bin/echo 1 > /dev/gpio/LCD_LED
+/bin/echo 0 > /sys/devices/platform/soc/soc\:backlight/backlight/soc\:backlight/bl_power
 
-/usr/bin/dtoverlay w1-gpio gpiopin=29
-/usr/bin/dtoverlay w1-gpio gpiopin=42
 
-ln -sf `ls /sys/devices/w1_bus_master1/28-*/w1_temperature` /home/pi/w1_temperature1 &
-ln -sf `ls /sys/devices/w1_bus_master2/28-*/w1_temperature` /home/pi/w1_temperature2 &
+ln -sf `ls /sys/devices/w1_bus_master1/28-*/temperature` /home/pi/w1_temperature1 &
+ln -sf `ls /sys/devices/w1_bus_master2/28-*/temperature` /home/pi/w1_temperature2 &
 
-ln -sf `ls /sys/devices/platform/soc/*/i2c-0/0-0040/hwmon/hwmon*/current_monitor` /home/pi/doorlock_current_monitor &
-ln -sf `ls /sys/devices/platform/soc/*/i2c-0/0-0040/hwmon/hwmon*/voltage_monitor` /home/pi/doorlock_voltage_monitor &
+ln -sf `ls /sys/devices/platform/soc/3f205000.i2c/i2c-11/i2c-0/0-0040/hwmon/hwmon*/current_monitor` /home/pi/doorlock_current_monitor &
+ln -sf `ls /sys/devices/platform/soc/3f205000.i2c/i2c-11/i2c-0/0-0040/hwmon/hwmon*/voltage_monitor` /home/pi/doorlock_voltage_monitor &
 
-ln -sf `ls /sys/devices/platform/soc/*/i2c-0/0-0041/hwmon/hwmon*/current_monitor` /home/pi/panel_current_monitor &
-ln -sf `ls /sys/devices/platform/soc/*/i2c-0/0-0041/hwmon/hwmon*/voltage_monitor` /home/pi/panel_voltage_monitor &
+ln -sf `ls /sys/devices/platform/soc/3f205000.i2c/i2c-11/i2c-0/0-0041/hwmon/hwmon*/current_monitor` /home/pi/panel_current_monitor &
+ln -sf `ls /sys/devices/platform/soc/3f205000.i2c/i2c-11/i2c-0/0-0041/hwmon/hwmon*/voltage_monitor` /home/pi/panel_voltage_monitor &
 
 /home/pi/expand.sh &
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 PATH_TO_GPIO_CLASS="/sys/class/gpio"
 PATH_TO_GPIO_FOLDER="/dev/gpio"
@@ -13,34 +13,35 @@ config_pin_and_create_link() {
 mkdir $PATH_TO_GPIO_FOLDER
 
 #configure OC1...OC4 pins as inputs
-config_pin_and_create_link "496" "in" "OC1"
-config_pin_and_create_link "497" "in" "OC2"
-config_pin_and_create_link "498" "in" "OC3"
-config_pin_and_create_link "499" "in" "OC4"
+config_pin_and_create_link "582" "in" "OC1"
+config_pin_and_create_link "583" "in" "OC2"
+config_pin_and_create_link "584" "in" "OC3"
+config_pin_and_create_link "585" "in" "OC4"
 
 #configure GPB6, GPB7, GPA7 as inputs
-config_pin_and_create_link "502" "out" "IRFILTER_ON"
-config_pin_and_create_link "503" "in" "GPB7"
-config_pin_and_create_link "495" "in" "GPA7"
+config_pin_and_create_link "588" "out" "IRFILTER_ON"
+config_pin_and_create_link "589" "in" "GPB7"
+config_pin_and_create_link "581" "in" "GPA7"
 
 #configure GPIO25, GPIO26 as inputs
-config_pin_and_create_link "25" "in" "GPIO25"
-config_pin_and_create_link "26" "in" "GPIO26"
+config_pin_and_create_link "537" "in" "GPIO25"
+config_pin_and_create_link "538" "in" "GPIO26"
 
 #configure GPIO16, GPIO27, GPIO45 as outputs
-config_pin_and_create_link "16" "out" "GPIO16"
-config_pin_and_create_link "45" "out" "LCD_LED"
+config_pin_and_create_link "528" "out" "GPIO16"
 
 #configure tx_enable (GPIO17) as output
-config_pin_and_create_link "17" "out" "TX_ENABLE"
+config_pin_and_create_link "529" "out" "TX_ENABLE"
 
 #configure RL1, RL2 as outputs
-config_pin_and_create_link "488" "out" "RL1"
-config_pin_and_create_link "489" "out" "RL2"
+config_pin_and_create_link "574" "out" "RL1"
+config_pin_and_create_link "575" "out" "RL2"
 
 #configure IRLED_ON as output
-config_pin_and_create_link "490" "out" "IRLED_ON"
+config_pin_and_create_link "576" "out" "IRLED_ON"
 
 #configure HEAT_ON as output
-config_pin_and_create_link "35" "out" "HEAT_ON1"
-config_pin_and_create_link "8" "out" "HEAT_ON2"
+config_pin_and_create_link "547" "out" "HEAT_ON1"
+config_pin_and_create_link "520" "out" "HEAT_ON2"
+
+exit 0
