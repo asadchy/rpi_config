@@ -71,8 +71,8 @@ state.audioinjectorpi {
 	control.1 {
 		iface MIXER
 		name 'Master Playback Volume'
-		value.0 121
-		value.1 121
+		value.0 116
+		value.1 116
 		comment {
 			access 'read write'
 			type INTEGER
@@ -80,8 +80,8 @@ state.audioinjectorpi {
 			range '0 - 127'
 			dbmin -9999999
 			dbmax 600
-			dbvalue.0 0
-			dbvalue.1 0
+			dbvalue.0 -500
+			dbvalue.1 -500
 		}
 	}
 	control.2 {
@@ -98,8 +98,8 @@ state.audioinjectorpi {
 	control.3 {
 		iface MIXER
 		name 'Capture Volume'
-		value.0 26
-		value.1 26
+		value.0 31
+		value.1 31
 		comment {
 			access 'read write'
 			type INTEGER
@@ -107,8 +107,8 @@ state.audioinjectorpi {
 			range '0 - 31'
 			dbmin -3450
 			dbmax 1200
-			dbvalue.0 450
-			dbvalue.1 450
+			dbvalue.0 1200
+			dbvalue.1 1200
 		}
 	}
 	control.4 {
