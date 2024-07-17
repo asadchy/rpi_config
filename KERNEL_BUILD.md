@@ -6,7 +6,9 @@
 # Ядро:
 
 1. `git clone https://github.com/asadchy/linux.git`
+1. Зайти в склонированную директорию и переключить ветку `git checkout rpi-6.6.y`
 1. `git clone https://github.com/asadchy/rpi_config.git`
+1. Зайти в склонированную директорию и переключить ветку `git checkout rpi-6.6.y`
 1. Файл `.config` из директории `rpi_config` скопировать в директорию `linux`.
 1. Перейти в директорию `linux`.
 1. `make -j8 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs` (компилируем ядро, модули, dtb)
