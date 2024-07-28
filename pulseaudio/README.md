@@ -1,9 +1,11 @@
 # Pulseaudio setup
 
 1. sudo apt-get update
-1. sudo apt-get install pulseaudio meson bc autopoint libfftw3-dev gettext libgettextpo-dev libxml2-utils liblist-moreutils-perl
-1. `daemon.conf` - положить в `/rootfs/etc/pulse/`
-1. `default.pa` - положить в `/rootfs/etc/pulse/`
+1. sudo apt-get install pulseaudio meson bc autopoint libfftw3-dev gettext libgettextpo-dev libxml2-utils liblist-moreutils-perl autoconf libtool libxml-parser-perl libglib2.0-dev
+1. `daemon.conf` - положить в <path_to_mount_point>/etc/pulse/`
+1. `default.pa` - положить в `<path_to_mount_point>/etc/pulse/`
+
+Все пакеты, указанные ниже, собираются на устройстве
 
 # LADSPA build and install
 1. cd ~/

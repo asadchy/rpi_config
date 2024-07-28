@@ -15,9 +15,8 @@
 1. После окончания компиляции, подключить SD-карту.
 1. Все последующие команды выполняются из директории `linux`.
 1. `sudo cp arch/arm/boot/zImage <path_to_mount_point>/boot/firmware/kernel7.img`
-1. `sudo cp arch/arm/boot/dts/*.dtb <path_to_mount_point>/boot/firmware/`
 1. `sudo cp arch/arm/boot/dts/overlays/*.dtb* <path_to_mount_point>/boot/firmware/overlays/`
-1. `sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=<path_to_mount_point>/rootfs/ modules_install`
+1. `sudo make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=<path_to_mount_point>/ modules_install`
 
 # Последующая конфигурация:
 
