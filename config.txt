@@ -51,9 +51,11 @@ dtoverlay=vc4-kms-v3d
 ignore_lcd=1
 dtoverlay=rpi-jd9365-pwm-backlight
 dtoverlay=rpi-nxp-mfrc522
-dtoverlay=gpio-door-lock
+dtoverlay=gpio-door-lock,open_time=6000
 dtoverlay=ti-ina260,addr=0x41
 dtoverlay=ti-ina260,addr=0x40
 dtoverlay=in-pi556
-dtoverlay=i2c0-bcm2708,pins_0_1=1
-dtoverlay=ov5647,cam0
+dtparam=i2c_vc=on
+dtparam=watchdog=on
+gpu_mem=256
+start_x=1
