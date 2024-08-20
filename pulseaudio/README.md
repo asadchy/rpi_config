@@ -1,9 +1,10 @@
 # Pulseaudio setup
 
 1. sudo apt-get update
-1. sudo apt-get install pulseaudio meson bc autopoint libfftw3-dev gettext libgettextpo-dev libxml2-utils liblist-moreutils-perl autoconf libtool libxml-parser-perl libglib2.0-dev
+1. sudo apt-get install pulseaudio meson bc autopoint libfftw3-dev gettext libgettextpo-dev libxml2-utils liblist-moreutils-perl autoconf libtool libxml-parser-perl libglib2.0-dev libssl1.1
 1. `daemon.conf` - положить в <path_to_mount_point>/etc/pulse/`
 1. `default.pa` - положить в `<path_to_mount_point>/etc/pulse/`
+1. включить pulseaudio, для этого запустить `raspi-config`, выбрать `6 Advanced Options` -> `A7 Audio Config` -> `1 Pulse Audio`
 
 Все пакеты, указанные ниже, собираются на устройстве
 
