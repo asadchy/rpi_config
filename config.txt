@@ -59,3 +59,4 @@ dtparam=i2c_vc=on
 dtparam=watchdog=on
 gpu_mem=256
 start_x=1
+dtoverlay=uart1,txd1_pin=32,rxd1_pin=33
