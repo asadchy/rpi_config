@@ -6,9 +6,9 @@
 
 1. `config.txt` - конфиг RPI.\
 Положить в `<path_to_mount_point>/boot/firmware`.
-1. `dt-blob.bin` - конфиг GPU (для конфигурации камеры).\
+1. `dt-blob.bin` - конфиг GPU (для конфигурации камер).\
 Положить в `/boot/firmware`.
-1. `dt-blob-cam1.dts` - вышеупомянутый конфиг в формате dts.\
+1. `dt-blob.dts` - вышеупомянутый конфиг в формате dts.\
 Нужен на случай необходимости внести изменения.
 1. `asound.conf` - конфиг аудио кодека.\
 Положить в `<path_to_mount_point>/etc`.

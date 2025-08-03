@@ -21,8 +21,8 @@
         // BANK 0 - USER GPIO //
         pin@p0  { function = "i2c0";   termination = "pull_up";    }; // GPU WILL USE THIS PIN FOR CAMERA 0 I2C0 SDA
         pin@p1  { function = "i2c0";   termination = "pull_up";    }; // GPU WILL USE THIS PIN FOR CAMERA 0 I2C0 SCL
-        pin@p2  { function = "input";   termination = "pull_up";    }; // DEFAULT STATE
-        pin@p3  { function = "input";   termination = "pull_up";    }; // DEFAULT STATE
+        pin@p2  { function = "i2c1";   termination = "pull_up";    }; // GPU WILL USE THIS PIN FOR CAMERA 0 I2C1 SDA
+        pin@p3  { function = "i2c1";   termination = "pull_up";    }; // GPU WILL USE THIS PIN FOR CAMERA 0 I2C1 SCL
         pin@p4  { function = "output";  termination = "no_pulling"; }; // GPU WILL USE THIS PIN FOR CAMERA 0 LED
         pin@p5  { function = "input";   termination = "pull_up";    }; // DEFAULT STATE
         pin@p6  { function = "input";   termination = "pull_up";    }; // DEFAULT STATE
@@ -49,8 +49,8 @@
         pin@p21 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
         pin@p22 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
         pin@p23 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
-        pin@p24 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
-        pin@p25 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
+        pin@p24 { function = "output";  termination = "no_pulling"; }; // GPU WILL USE THIS PIN FOR CAMERA 1 LED
+        pin@p25 { function = "output";  termination = "no_pulling"; }; // GPU WILL USE THIS PIN FOR CAMERA 1 SHUTDOWN
         pin@p26 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
         pin@p27 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
 
@@ -93,7 +93,7 @@
         };
         pin_define@NUM_CAMERAS {
           type = "internal";
-          number = <1>;
+          number = <2>;
         };
         pin_define@CAMERA_0_LED {
           type = "internal";
@@ -119,6 +119,30 @@
           type = "internal";
           number = <1>;
         };
+        pin_define@CAMERA_1_LED {
+          type = "internal";
+          number = <24>;
+        };
+        pin_define@CAMERA_1_SHUTDOWN {
+          type = "internal";
+          number = <25>;
+        };
+        pin_define@CAMERA_1_UNICAM_PORT {
+          type = "internal";
+          number = <1>;
+        };
+        pin_define@CAMERA_1_I2C_PORT {
+          type = "internal";
+          number = <1>;
+        };
+        pin_define@CAMERA_1_SDA_PIN {
+          type = "internal";
+          number = <2>;
+        };
+        pin_define@CAMERA_1_SCL_PIN {
+          type = "internal";
+          number = <3>;
+        };
       }; // pin_defines
 
     }; // pins_cm
@@ -134,13 +158,17 @@
            function = "input";
         }; // pin
 
-        pin@p0  { function = "i2c0";  termination = "pull_up";    }; // CAMERA 0 I2C0 SDA
-        pin@p1  { function = "i2c0";  termination = "pull_up";    }; // CAMERA 0 I2C0 SCL
+        pin@p0  { function = "i2c0";  termination = "pull_up";     }; // CAMERA 0 I2C0 SDA
+        pin@p1  { function = "i2c0";  termination = "pull_up";     }; // CAMERA 0 I2C0 SCL
+        pin@p2  { function = "i2c1";   termination = "pull_up";    }; // CAMERA 1 I2C0 SDA
+        pin@p3  { function = "i2c1";   termination = "pull_up";    }; // CAMERA 1 I2C0 SDA
         pin@p4  { function = "output"; termination = "no_pulling"; }; // CAMERA 0 LED
         pin@p12 { function = "output"; termination = "no_pulling"; }; // CAMERA 0 SHUTDOWN
         pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
         pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
-	pin@p40 { function = "pwm";    termination = "no_pulling"; };
+        pin@p24 { function = "output"; termination = "no_pulling"; }; // CAMERA 1 LED
+        pin@p25 { function = "output"; termination = "no_pulling"; }; // CAMERA 1 SHUTDOWN
+	    pin@p40 { function = "pwm";    termination = "no_pulling"; };
         pin@p46 { function = "input";  termination = "pull_up";    }; // SMPS_SCL
         pin@p47 { function = "input";  termination = "pull_up";    }; // SMPS_SDA
         pin@p48 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD CLK
@@ -212,7 +240,7 @@
 
         pin_define@NUM_CAMERAS {
           type = "internal";
-          number = <1>;
+          number = <2>;
         };
         pin_define@CAMERA_0_LED {
           type = "internal";
@@ -237,6 +265,30 @@
         pin_define@CAMERA_0_SCL_PIN {
           type = "internal";
           number = <1>;
+        };
+        pin_define@CAMERA_1_LED {
+          type = "internal";
+          number = <24>;
+        };
+        pin_define@CAMERA_1_SHUTDOWN {
+          type = "internal";
+          number = <25>;
+        };
+        pin_define@CAMERA_1_UNICAM_PORT {
+          type = "internal";
+          number = <1>;
+        };
+        pin_define@CAMERA_1_I2C_PORT {
+          type = "internal";
+          number = <1>;
+        };
+        pin_define@CAMERA_1_SDA_PIN {
+          type = "internal";
+          number = <2>;
+        };
+        pin_define@CAMERA_1_SCL_PIN {
+          type = "internal";
+          number = <3>;
         };
       }; // pin_defines
 

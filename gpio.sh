@@ -23,8 +23,7 @@ config_pin_and_create_link "588" "out" "IRFILTER_ON"
 config_pin_and_create_link "589" "in" "GPB7"
 config_pin_and_create_link "581" "in" "GPA7"
 
-#configure GPIO25, GPIO26 as inputs
-config_pin_and_create_link "537" "in" "GPIO25"
+#configure GPIO26 as inputs
 config_pin_and_create_link "538" "in" "GPIO26"
 
 #configure GPIO16, GPIO27, GPIO45 as outputs
