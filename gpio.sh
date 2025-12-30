@@ -7,7 +7,7 @@ PATH_TO_GPIO_FOLDER="/dev/gpio"
 config_pin_and_create_link() {
 	echo $1 > $PATH_TO_GPIO_CLASS/export
 	echo $2 > $PATH_TO_GPIO_CLASS/gpio$1/direction
-	ln -s $PATH_TO_GPIO_CLASS/gpio$1/value $PATH_TO_GPIO_FOLDER/$3
+	ln -f -s $PATH_TO_GPIO_CLASS/gpio$1/value $PATH_TO_GPIO_FOLDER/$3
 }
 
 mkdir $PATH_TO_GPIO_FOLDER
